@@ -4,8 +4,104 @@
 
     font-family: "typo1";
     src: url("D:/Documents/BeCode/Exe/ReproducingLayout/reproducing-layout/resources/Marcellus-Regular.ttf") format("truetype");
+
+    font-family: "typo2";
+    src: url("D:/Documents/BeCode/Exe/MediaQuery/Media-Query/resources/CormorantGaramond-Regular.ttf") format("truetype");
 }
 
 body{
-    font-family: "typo";
+    font-family: "typo", sans-serif;
+    font-size: 1em;
+    margin: 50px 200px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+strong{
+    font-style: italic;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 300px) {
+    body {
+      background-color: red;
+      font-family: "typo1";
+      
+    }
+
+    #small, #medium, #large{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*#medium, #large{
+        display: none;
+    }*/
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+    body {
+      background-color: green;
+      font-family: "typo", sans-serif;
+    }
+
+    #small, #medium, #large{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #small{
+        width: 66%;
+    }
+
+    #medium{
+        width: 33%;
+    }
+    #large{
+        width: 100%;
+    }
+
+    /*#medium{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #small, #large{
+        display: none;
+    }*/
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+      background-color: red;
+      font-family: "typo2";  
+      display: flex;   
+      justify-content: space-between;
+      gap: 1.5em;
+    }
+
+    #small, #medium, #large{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*#large{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #small, #medium{
+        display: none;
+    }*/
 }
