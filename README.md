@@ -1,3 +1,5 @@
 # Media-Query
 
-***Exercices***
+***Exercices***  
+
+Little training with media queries.
